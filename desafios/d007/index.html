@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Flexível</title>
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência&#x1F92F;. </p>
+
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/logo_300x300.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="imagens/logo_700x700.png" type="image/png">
+        <img src="imagens/logo_1000x1000.png" alt="Imagem flexível">
+    </picture>
+
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/image_300x300.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="imagens/image_700x700.png" type="image/png">
+        <img src="imagens/image_1000x1000.png" alt="Imagem WIF">
+    </picture>
+</body>
+</html>

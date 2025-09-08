@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+
+        /* Seletores Personalizados
+            # = id
+            . = class
+            : = pseudo-class
+            : : = pseudo-element
+            > = children
+        */
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none ; /* Tira o sublinhado do link */
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: rgb(23, 183, 41);
+        }
+
+        a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active{
+            color:yellow
+        }
+
+        a::before {
+            content: ' ☣ ';
+        }
+
+        a::after {
+            content: ' ☠ ';
+            text-decoration: none;
+            font-weight: normal;
+            color: rgb(170, 21, 135);
+        }
+
+        .importante::before {
+            content: '⚑ ';
+        }
+
+        .importante::after {
+            content: '⚑ ';
+        }
+
+        .importante {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/plpaulalisboa" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://www.youtube.com/@plisboa" class="importante">Canal do Youtube</a></li>
+        <li><a href="https://www.linkedin.com/in/plpaulalisboa/">LinkedIn</a></li>
+    </ul>
+</body>
+</html>
