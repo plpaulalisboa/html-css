@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 011</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;   /* altura total da tela */
+            width: 100vw;    /* largura total da tela */
+            background: url('imagens/espaco.jpg') no-repeat center center;
+            background-size: cover; /* cobre toda a tela */
+        }
+
+        .astronauta {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 300px; /* controla o tamanho do astronauta */
+            width: 40%; /* se adapta ao tamanho da tela */
+        }
+    </style>
 </head>
 <body>
-    <p>teste de versionamento</p>
+    <main>
+        <img src="imagens/astronauta.png" alt="Astronauta" class="astronauta">
+    </main>
 </body>
 </html>
