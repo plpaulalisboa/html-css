@@ -1,13 +1,25 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+:root {
+    --fonte01: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte02: "Passion One", sans-serif;
+    --fonte03: "Caveat", cursive;
+}
+
 * {
     margin: 0px;
-    padding: 0px
+    padding: 0px;
+    font-size: 1em;
 }
 
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte01);
 }
 
 header {
@@ -19,6 +31,8 @@ header {
 header > h1 {
     padding: 50px;
     font-variant: small-caps;
+    font-family: var(--fonte02);
+    font-size: 10vw; /* uma possível solução para ajustar as letras, quando for em desktop e você reduzir para uma tela mobile as letras se ajustam ao tamanho da tela */
 }
 
 header > p {
@@ -40,6 +54,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte03);
+    font-size: 4vw; /* uma possível solução para ajustar as letras, quando for em desktop e você reduzir para uma tela mobile as letras se ajustam ao tamanho da tela */
 }
 
 section.normal {
@@ -53,7 +69,8 @@ section.imagem {
 }
 
 section.imagem > p {
-    width: 400px;
+    display: inline-block; /* caixa que se adapta ao tamanho do conteúdo  */
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.27);
 }
 
