@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Responsivas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bolder;
+            padding: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        rh:nth-child(even) {
+            background-color: aqua;
+        }
+
+        div#container {
+            overflow-x: auto;
+        } /*/ overflow é conteúdo que transboarda */
+
+    </style>
+</head>
+<body>
+    <h1>Tabelas em telas pequenas</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit perspiciatis hic quaerat rem nihil dolores ducimus. Cupiditate quam fuga ex a voluptatum, beatae sunt omnis distinctio sint eveniet porro facilis!</p>
+    <div id="container">
+        <table>
+            <caption>Tabelas Responsivas</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Celular</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>01</td>
+                </tr>
+                 <tr>
+                    <td>Televisão</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>08</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>11</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>81</td>
+                    <td>02</td>
+                    <td>01</td>
+                </tr>
+                <tr>
+                    <td>Sofá</td>
+                    <td>03</td>
+                    <td>02</td>
+                    <td>07</td>
+                    <td>01</td>
+                    <td>05</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                </tr>
+                <tr>
+                    <td>Geladeira</td>
+                    <td>01</td>
+                    <td>08</td>
+                    <td>07</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>06</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>01</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<!--Seleciona de Table até /Table, envelope com Ctrl Shift P, wrap e coloque "div", ou seja, a tabela toda ficará dentro de uma div (visualmente não vai acontecer nada)  coloque o id (usando o overflow)-->
