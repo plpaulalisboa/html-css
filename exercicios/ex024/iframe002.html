@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe - Configurando</title>
+    <style>
+       /* iframe {
+            width: 400px;
+            height: 400px;
+        } */
+        iframe {
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+
+    <p>
+        Acessando o site do 
+    <iframe src="https://cursoemvideo.com/" frameborder="0">
+        <a href="https://cursoemvideo.com" target="_blank">Curso em Vídeo</a> <!-- Se o navegador não for compatível com o iframe, você pode colocar a tag de link e inserir o link manulmente, porque ai ele vai mostrar a opção clicável ao invés do iframe -->
+    </iframe> 
+        para aprender a programar
+    </p>
+    
+    <!-- Você pode configurar altrura e largura, por padrão um iframe é de 300 por 150px, abaixo a altura e largura está com 500px-->
+    <p>
+        O site do Velovia  
+    <iframe src="https://velovia.com.br/Privacidade/index.html" frameborder="0" height="500" width="500" scolling="no">
+    </iframe>
+        também é bem legal
+    </p>
+    <!-- O parametro Scolling no caso acima seria para não ter a barra de rolagem do iframe, mas não está funcionando no Google Chrome do windows. -->
+
+    <!-- Você também pode mudar altura e largura usando CSS (exemplo em style). Importante lembrar que as CSS são soberanas neste caso, então o que você colocar lá servirar para todos os iframes. Caso não exista nenhuma configuração em folhas de estilo, fica valendo as dimensões definidas (conforme paragrafo anterior). E caso não exista as dimensões em CSS e nem no próprio iframe, ficará valendo as dimensões padrão (300x150). -->
+    <p>
+        Por exemplo, este 
+    <iframe src="https://www.google.com.br" frameborder="0">
+    </iframe>
+    <a href="https://cursoemvideo.com" target="_blank">Site do Google</a> não funciona o iframe.
+    </p>
+</body>
+</html>
