@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe - Bloquear Ações</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, praesentium, aut, facilis dignissimos fugit atque ratione culpa consequatur nesciunt repellat id totam deserunt cupiditate quis corporis voluptatum suscipit amet libero.</p>
+
+    <iframe src="paginas-extras/pagina004.html" frameborder="0" sandbox="sandbox" referrerpolicy="no-referrer">
+        Seu navegador não é compatível com isso.
+    </iframe>
+
+    <!-- Bloquear todas as ações que são potencialmente maliciosas dos sites que você coloca dentro do iframe use o sandbox. O no-referrer quer dizer que o que está carregado dentro do iframe (o conteúdo que está carregado dentro do iframe) não vai coletar nenhum tipo de informação do usuário. -->
+ 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dicta quisquam iste odio at facere, vitae, modi tempore doloribus sequi aperiam aliquid deserunt rem quis. Quis accusamus quos itaque odio!</p>
+</body>
+</html>
