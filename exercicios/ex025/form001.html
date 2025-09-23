@@ -17,11 +17,16 @@
 <body>
     <h1>Meu primeiro formulário.</h1>
 
-    <form action="cadastro.php" autocomplete="off">
+    <form action="cadastro.php" method="get" autocomplete="off">
         <p><label for="inome">Nome:</label> <input type="text" name="Nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome</label>: <input type="text" name="isobrenome" id="sobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
     </form>
+
+
+    <!-- Existem 2 métodos:
+     GET = quando não usamos método nenhum (que é padrão), os dados ficam visíveis na URL.
+     POST = os dados não ficam visíveis na URL (atenção: o dado ainda não está protegido anda dá para visualizar dentro do corpo em "inspecionar") -->
 
 </body>
 </html>
