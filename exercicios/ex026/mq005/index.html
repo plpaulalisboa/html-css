@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>As Melhores Motos de São Paulo</title>
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" /> <!-- Ícone menu -->
+    <link rel="stylesheet" href="estilos/style.css"> <!-- Estilo genérico para funcionar no mobile firts -->
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/media-querry.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Johnny Motos Brasil</h1>
-        <menu>
+        <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+        <menu id="itens">
             <ul>
                 <li><a href="">Início</a></li>
                 <li><a href="">Motos</a></li>
@@ -51,5 +54,23 @@
     <footer>
         <p>Site desenvolvido por Paula Lisboa.</p>
     </footer>
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>
