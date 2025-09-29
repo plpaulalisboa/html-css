@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner1 {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.conteiner2 {
+            background-color: lightgreen;
+
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        div.item2 {
+            background-color: lightpink;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.conteiner3 {
+            background-color: lightgreen;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.item3 {
+            background-color: lightpink;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.conteiner4 {
+            background-color: lightskyblue;
+
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        div.item4 {
+            background-color: lightyellow;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner1">
+        <div class="item1">A</div>
+        <div class="item1">B</div>
+        <div class="item1">C</div>
+        <div class="item1">D</div>
+        <div class="item1">E</div>
+        <div class="item1">F</div>
+        <div class="item1">G</div>
+    </div>
+    
+
+    <div class="conteiner2">
+        <div class="item2">A</div>
+        <div class="item2">B</div>
+        <div class="item2">C</div>
+        <div class="item2">D</div>
+        <div class="item2">E</div>
+        <div class="item2">F</div>
+        <div class="item2">G</div>
+    </div>
+
+<div class="conteiner3">
+        <div class="item3">1</div>
+        <div class="item3">2</div>
+        <div class="item3">3</div>
+        <div class="item3">4</div>
+        <div class="item3">5</div>
+        <div class="item3">6</div>
+        <div class="item3">7</div>
+    </div>
+
+
+<div class="conteiner4">
+        <div class="item4">1</div>
+        <div class="item4">2</div>
+        <div class="item4">3</div>
+        <div class="item4">4</div>
+        <div class="item4">5</div>
+        <div class="item4">6</div>
+        <div class="item4">7</div>
+    </div>
+
+     <!-- 
+    A configuração padrão é Flex-Direction: Row (é "deitado" da esquerda para a dereita)
+    Flex-Direction: Row-Reverse (modo reverso, da direita para a esquerda)
+    Flex-Direction: Column (o fluxo normal é de cima para baixo)
+    Flex-Direction: Column-Reverse (os itens vão ser empilhados debaixo para cima)
+
+    Existem 2 eixos:
+    - O eixo Principal que é o Main-Axis (gera dois pontos, o ponto inicial que é chamado de "main-start" e o ponto final que é chamado de "main-end").
+    - Cross-Axis, que também gera 2 pontos (Cross-Start e o Cross-End)
+
+
+    Resumo:
+    - Flex-Direction: Row, o "Main-Axis" vai da esquerda para a direita e o "Cross-Axis" vai de cima para baixo;
+    - Flew-Direction: Row-Reverse, o "Mais-Axis" vai da direita para a esquerda e o "Cross-Axis" não muda, continua de cima para baixo;
+
+    - Flex-Direction: Column, o "Main-Axis" vai de cima para baixo e o "Cross-Axis" vai da esquerda para a direita;
+    - Flex-Direction: Column-Reverse, o "Main-Axis" vai de baixo para cima, e o "Cross-Axis" não muda, continua da esquerda para a direita.
+    -->
+
+</body>
+</html>
