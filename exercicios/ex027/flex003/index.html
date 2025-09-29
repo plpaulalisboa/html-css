@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner1 {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.conteiner2 {
+            background-color: lightgreen;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        div.item2 {
+            background-color: lightpink;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.conteiner3 {
+            background-color: orange;
+
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap-reverse;
+        }
+
+        div.item3 {
+            background-color: blue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.conteiner4 {
+            background-color: lightskyblue;
+
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+        }
+
+        div.item4 {
+            background-color: yellow;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.conteiner5 {
+            background-color: pink;
+
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap-reverse;
+        }
+
+        div.item5 {
+            background-color: lightyellow;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.conteiner6 {
+            background-color: rgb(192, 252, 255);
+
+            display: flex;
+            flex-flow: row nowrap; /* shorthand */
+        }
+
+        div.item6 {
+            background-color: rgb(168, 11, 92);
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>rgba
+    <h1>Empacotamento e fluxo no Flexbox</h1>
+    <div class="conteiner1">
+        <div class="item1">Exemplo de bloco A</div>
+        <div class="item1">Exemplo de bloco B</div>
+        <div class="item1">Exemplo de bloco C</div>
+        <div class="item1">Exemplo de bloco D</div>
+        <div class="item1">Exemplo de bloco E</div>
+        <div class="item1">Exemplo de bloco F</div>
+        <div class="item1">Exemplo de bloco G</div>
+    </div>
+    
+    <br>
+
+    <div class="conteiner2">
+        <div class="item2">Exemplo de bloco A</div>
+        <div class="item2">Exemplo de bloco B</div>
+        <div class="item2">Exemplo de bloco C</div>
+        <div class="item2">Exemplo de bloco D</div>
+        <div class="item2">Exemplo de bloco E</div>
+        <div class="item2">Exemplo de bloco F</div>
+        <div class="item2">Exemplo de bloco G</div>
+    </div>
+<br>
+<div class="conteiner3">
+        <div class="item3">Exemplo de bloco 1</div>
+        <div class="item3">Exemplo de bloco 2</div>
+        <div class="item3">Exemplo de bloco 3</div>
+        <div class="item3">Exemplo de bloco 4</div>
+        <div class="item3">Exemplo de bloco 5</div>
+        <div class="item3">Exemplo de bloco 6</div>
+        <div class="item3">Exemplo de bloco 7</div>
+    </div>
+
+<br>
+<div class="conteiner4">
+        <div class="item4">Exemplo de bloco 1</div>
+        <div class="item4">Exemplo de bloco 2</div>
+        <div class="item4">Exemplo de bloco 3</div>
+        <div class="item4">Exemplo de bloco 4</div>
+        <div class="item4">Exemplo de bloco 5</div>
+        <div class="item4">Exemplo de bloco 6</div>
+        <div class="item4">Exemplo de bloco 7</div>
+    </div>
+
+<br>
+<div class="conteiner5">
+        <div class="item5">Exemplo de bloco 1</div>
+        <div class="item5">Exemplo de bloco 2</div>
+        <div class="item5">Exemplo de bloco 3</div>
+        <div class="item5">Exemplo de bloco 4</div>
+        <div class="item5">Exemplo de bloco 5</div>
+        <div class="item5">Exemplo de bloco 6</div>
+        <div class="item5">Exemplo de bloco 7</div>
+    </div>
+
+<br>
+<div class="conteiner6">
+        <div class="item6">Exemplo de bloco 1</div>
+        <div class="item6">Exemplo de bloco 2</div>
+        <div class="item6">Exemplo de bloco 3</div>
+        <div class="item6">Exemplo de bloco 4</div>
+        <div class="item6">Exemplo de bloco 5</div>
+        <div class="item6">Exemplo de bloco 6</div>
+        <div class="item6">Exemplo de bloco 7</div>
+    </div>
+
+     <!-- 
+    Flex-Wrap significa empacotamento/encapsulamento, essa propriedade vai configurar é o comportamento dessa capsula (essa capsula é o container, ou seja, é o pai) e como esse pai vai se comportar. Por padrão esse Flex-Wrap está configurado como "Flex-Wrap: nowrap", nowrap é não encapsule, não vai quebrar os conteúdos.
+
+    O encolhimento dos blocos, o encolhimento dos itens dentro de um flex-box vai depender muito da capacidade de encolhimento dele, se for um texto com palavras muito grandes, ele vai ficar do tamanho da palavra mais longa, se não der ele vai quebrar.
+
+    Quando você usa "Flex-Wrap: wrap" caso não aja espaço mais sufuciente ele vai quebrar no sentido do eixo transversal, ou seja, Cross-Axis (vai para baixo).
+
+    Flex-Wrap: wrap-reverse, ele vai quebrar mas no sentido oposto ao transversal (vai para cima).
+    -->
+
+</body>
+</html>
