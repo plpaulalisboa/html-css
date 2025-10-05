@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento de elementos empacotados no Flexbox</title>
+    <style>
+        div.conteiner1 {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            height: 400px;
+            
+        }
+
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        div.conteiner2 {
+            background-color: lightgreen;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: stretch;
+            height: 400px;
+        }
+
+        div.item2 {
+            background-color: lightpink;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        div.conteiner3 {
+            background-color: orange;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            height: 400px;
+        }
+
+        div.item3 {
+            background-color: blue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        div.conteiner4 {
+            background-color: lightskyblue;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-end;
+            height: 400px;
+        }
+
+        div.item4 {
+            background-color: yellow;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        div.conteiner5 {
+            background-color: pink;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            height: 400px;
+        }
+
+        div.item5 {
+            background-color: lightyellow;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        div.conteiner6 {
+            background-color: rgb(192, 252, 255);
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+            height: 400px;
+        }
+
+        div.item6 {
+            background-color: rgb(168, 11, 92);
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        div.conteiner7 {
+            background-color: rgb(205, 22, 12);
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-evenly;
+            height: 400px;
+        }
+
+        div.item7 {
+            background-color: rgba(20, 8, 190, 0.959);
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        div.conteiner8 {
+            background-color: rgb(19, 208, 129);
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-around;
+            height: 400px;
+        }
+
+        div.item8 {
+            background-color: rgba(236, 18, 211, 0.959);
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        div.conteiner9 {
+            background-color: rgb(94, 2, 170);
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            height: 400px;
+        }
+
+        div.item9 {
+            background-color: rgba(40, 136, 18, 0.959);
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Alinhamento de elementos empacotados no Flexbox</h1>
+
+
+    <div class="conteiner1">
+        <div class="item1">Exemplo de bloco A</div>
+        <div class="item1">Exemplo de bloco B</div>
+        <div class="item1">Exemplo de bloco C</div>
+        <div class="item1">Exemplo de bloco D</div>
+        <div class="item1">Exemplo de bloco E</div>
+        <div class="item1">Exemplo de bloco F</div>
+        <div class="item1">Exemplo de bloco G</div>
+    </div>
+    
+    <br>
+
+    <div class="conteiner2">
+        <div class="item2">Exemplo de bloco A</div>
+        <div class="item2">Exemplo de bloco B</div>
+        <div class="item2">Exemplo de bloco C</div>
+        <div class="item2">Exemplo de bloco D</div>
+        <div class="item2">Exemplo de bloco E</div>
+        <div class="item2">Exemplo de bloco F</div>
+        <div class="item2">Exemplo de bloco G</div>
+    </div>
+
+    <br>
+    <div class="conteiner3">
+        <div class="item3">Exemplo de bloco 1</div>
+        <div class="item3">Exemplo de bloco 2</div>
+        <div class="item3">Exemplo de bloco 3</div>
+        <div class="item3">Exemplo de bloco 4</div>
+        <div class="item3">Exemplo de bloco 5</div>
+        <div class="item3">Exemplo de bloco 6</div>
+        <div class="item3">Exemplo de bloco 7</div>
+    </div>
+
+    <br>
+    <div class="conteiner4">
+        <div class="item4">Exemplo de bloco 1</div>
+        <div class="item4">Exemplo de bloco 2</div>
+        <div class="item4">Exemplo de bloco 3</div>
+        <div class="item4">Exemplo de bloco 4</div>
+        <div class="item4">Exemplo de bloco 5</div>
+        <div class="item4">Exemplo de bloco 6</div>
+        <div class="item4">Exemplo de bloco 7</div>
+    </div>
+
+    <br>
+    <div class="conteiner5">
+        <div class="item5">Exemplo de bloco 1</div>
+        <div class="item5">Exemplo de bloco 2</div>
+        <div class="item5">Exemplo de bloco 3</div>
+        <div class="item5">Exemplo de bloco 4</div>
+        <div class="item5">Exemplo de bloco 5</div>
+        <div class="item5">Exemplo de bloco 6</div>
+        <div class="item5">Exemplo de bloco 7</div>
+    </div>
+
+    <br>
+    <div class="conteiner6">
+        <div class="item6">Exemplo de bloco 1</div>
+        <div class="item6">Exemplo de bloco 2</div>
+        <div class="item6">Exemplo de bloco 3</div>
+        <div class="item6">Exemplo de bloco 4</div>
+        <div class="item6">Exemplo de bloco 5</div>
+        <div class="item6">Exemplo de bloco 6</div>
+        <div class="item6">Exemplo de bloco 7</div>
+    </div>
+
+    <br>
+    <div class="conteiner7">
+        <div class="item7">Exemplo de bloco 1</div>
+        <div class="item7">Exemplo de bloco 2</div>
+        <div class="item7">Exemplo de bloco 3</div>
+        <div class="item7">Exemplo de bloco 4</div>
+        <div class="item7">Exemplo de bloco 5</div>
+        <div class="item7">Exemplo de bloco 6</div>
+        <div class="item7">Exemplo de bloco 7</div>
+    </div>
+
+    <br>
+    <div class="conteiner8">
+        <div class="item8">Exemplo de bloco 1</div>
+        <div class="item8">Exemplo de bloco 2</div>
+        <div class="item8">Exemplo de bloco 3</div>
+        <div class="item8">Exemplo de bloco 4</div>
+        <div class="item8">Exemplo de bloco 5</div>
+        <div class="item8">Exemplo de bloco 6</div>
+        <div class="item8">Exemplo de bloco 7</div>
+    </div>
+
+    <br>
+    <div class="conteiner9">
+        <div class="item9">Exemplo de bloco 1</div>
+        <div class="item9">Exemplo de bloco 2</div>
+        <div class="item9">Exemplo de bloco 3</div>
+        <div class="item9">Exemplo de bloco 4</div>
+        <div class="item9">Exemplo de bloco 5</div>
+        <div class="item9">Exemplo de bloco 6</div>
+        <div class="item9">Exemplo de bloco 7</div>
+    </div>
+
+    <!--
+    Conteúdo empacotado é aquele que se quebra.
+
+    Justify Content vai alinhar o conteúdo, vai alinhar os itens dentro do eixo Principal.
+
+    Align Itens vai alinhar os itens dentro do eixo Transversal.
+
+    Align Content alinha os elementos no eixo transversal, mas quando eles estão empacotados
+     
+    Align-Content tem por padrão o valor Stretch. O Stretch vai pegar toda a área disponível e vai dividir pelo número de linhas/colunas.
+
+    Align-Content: flex-start, ele vai pegar todos os elementos e colocar grudados no Cross-Start.
+
+    Align-Content: flex-end,  vai pegar todos os elementos e colocar próximo ao Cross-End.
+
+    Align-Content: center, vai pegar os elementos e vai criar no Cross-Start e no Cross-End espaços em branco. Esses espaços em branco vão fazer com que os itens fiquem alinhados ao centro ao Cross-Axis.
+
+    Align-Content: space-between, ele vai pegar os primeiros elementos e colocar perto do Cross-Start, vai pegar os últimos elementos e colocar perto do Cross-End e o espaço no meio ele vai dividir com outros itens que porventura venham a existir.
+
+    Align-Content: space-evenly, ele coloca um espaço no Cross-Start e colocar um espaço no Cross-End, esse espaço é calculado milimetricamente para que você coloque os elementos e entre esses elementos também exista exatamente o mesmo espaçamento.
+
+    Align-Content: space-around, ele vai começar dividindo o eixo transversal em partes iguais, só que ele não vai colocar os elementos e "espichar", ele vai colocar os elementos na área demarcada e vai centralizar os elementos/itens.
+
+    -->
+</body>
+</html>
