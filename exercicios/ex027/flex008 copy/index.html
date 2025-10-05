@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia dos itens Flexbox</title>
+    <style>
+        div.conteiner1 {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            height: 400px;
+        }
+
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div.conteiner2 {
+            background-color: lightgreen;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            height: 400px;
+        }
+
+        div.item2 {
+            background-color: lightpink;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div.conteiner3 {
+            background-color: orange;
+
+            display: flex;
+            flex-flow: row wrap;
+            
+            height: 400px;
+        }
+
+        div.item3 {
+            background-color: blue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div#i1 {
+            align-items: inherit;
+        }
+
+        div#i2 {
+            align-self: auto;
+        }
+
+        div#i3 {
+            align-self: flex-end;
+        }
+
+        div#i4 {
+            align-self: auto;
+        }
+
+        div#i5 {
+            align-self: center;
+        }
+
+        div#i6 {
+            align-self: flex-start;
+        }
+
+        div#i7 {
+            align-self: stretch;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Anatomia dos itens Flexbox</h1>
+    <h2>ALIGN-SELF</h2>
+
+    <div class="conteiner1">
+        <div class="item1" id="i1">A</div>
+        <div class="item1" id="i2">B</div>
+        <div class="item1" id="i3">C</div>
+        <div class="item1" id="i4">D</div>
+        <div class="item1" id="i5">E</div>
+        <div class="item1" id="i6">F</div>
+        <div class="item1" id="i7">G</div>
+    </div>
+    
+    <br>
+    <div class="conteiner2">
+        <div class="item2" id="i1">A</div>
+        <div class="item2" id="i2">B</div>
+        <div class="item2" id="i3">C</div>
+        <div class="item2" id="i4">D</div>
+        <div class="item2" id="i5">E</div>
+        <div class="item2" id="i6">F</div>
+        <div class="item2" id="i7">G</div>
+    </div>
+
+    <br>
+    <div class="conteiner3">
+        <div class="item3" id="i1">A</div>
+        <div class="item3" id="i2">B</div>
+        <div class="item3" id="i3">C</div>
+        <div class="item3" id="i4">D</div>
+        <div class="item3" id="i5">E</div>
+        <div class="item3" id="i6">F</div>
+        <div class="item3" id="i7">G</div>
+    </div>
+
+    <!--
+    
+    Quando a gente cria containers flexbox a parte de fora é flex e a parte de dentro não flex, os itens não são flex, mas você pode pegar um elemento e tornar ele container.
+
+    Nesse curso vai ser trabalhado o elemento Pai flex, e o elemento Filho não flex.
+
+    Flex-item estão dentro do container, o container é flexível, mas por padrão os itens não.
+
+    ORDER = Todo o item em flexbox vai ter Order 0 (por padrão), mas se você quiser modificar a ordem de exibição desses elementos você vai poder aplicar essa propriedade Order com valores diferentes.
+    
+    ALIGN-SELF = ela se aplica a cada um dos itens, cada um dos itens vai ter um alinhamento diferente se você quiser. O Align-self se aplica aos itens e ele vai funcionar diretamente no Cross-Axis (no eixo transversal). Existem 5 valores:
+    - Auto: ele vai herdar a característica de alinhamento vertical do seu pai, seja ele o align-content ou o align-item.
+    - Flex-start: que é o alinhamento perto do Cross-start.
+    - Flex-end: que é o alinhamento perto/grudado no Cross-end.
+    - Center: ele vai calcular o meio entre o Cross-start e o Cross-end.
+    - Stretch: ele vai dar uma puxada para que ele ocupe o espaço inteiro do eixo transversal.
+
+    -->
+</body>
+</html>
