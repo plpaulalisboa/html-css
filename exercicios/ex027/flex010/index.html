@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle do Tamanho de itens Flexíveis</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+        }
+
+
+        div.conteiner2 {
+            background-color: rgb(117, 178, 32);
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item2 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 0;
+        }
+
+        div.conteiner3 {
+            background-color: rgb(126, 22, 78);
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item3 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        div.conteiner4 {
+            background-color: rgb(15, 62, 133);
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item4 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        div.conteiner5 {
+            background-color: rgb(199, 192, 12);
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.item5 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        div.conteiner6 {
+            background-color: rgb(187, 99, 16);
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.item6 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        div.conteiner7 {
+            background-color: rgb(26, 184, 171);
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item7 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Controle do Tamanho de itens Flexíveis</h1>
+
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <br>
+    
+    <div class="conteiner2">
+        <div class="item2">A</div>
+        <div class="item2">B</div>
+        <div class="item2">C</div>
+    </div>
+
+    <br>
+
+    <div class="conteiner3">
+        <div class="item3">A</div>
+        <div class="item3">B</div>
+        <div class="item3">C</div>
+    </div>
+
+    <br>
+
+    <div class="conteiner4">
+        <div class="item4">A</div>
+        <div class="item4">B</div>
+        <div class="item4">C</div>
+    </div>
+
+    <br>
+
+    <div class="conteiner5">
+        <div class="item5">A</div>
+        <div class="item5">B</div>
+        <div class="item5">C</div>
+    </div>
+
+    <br>
+
+    <div class="conteiner6">
+        <div class="item6">A</div>
+        <div class="item6">B</div>
+        <div class="item6">C</div>
+    </div>
+
+    <br>
+
+    <div class="conteiner7">
+        <div class="item7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sit error, modi ipsam numquam iste, enim, deserunt soluta possimus reprehenderit perspiciatis consectetur ex rerum minima incidunt repudiandae dignissimos officia iusto.</div>
+        <div class="item7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, sint iure ea cumque aliquam harum repellat optio ut dignissimos fugit incidunt dolorem! Excepturi delectus sint recusandae quod accusamus, dolore corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam velit, modi, odio temporibus quibusdam esse sapiente amet dolor architecto id voluptates. Illo temporibus suscipit repudiandae, ullam maxime in necessitatibus?</div>
+        <div class="item7">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellat voluptas beatae aperiam dolore omnis! Animi aspernatur consectetur maxime, distinctio totam voluptatem debitis. Quia recusandae optio dicta vel maiores culpa!Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolor ipsum libero vitae alias quas voluptatem recusandae ea debitis dignissimos. Omnis, impedit! Iusto culpa delectus animi. Necessitatibus, aperiam. Officia, delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid delectus incidunt vitae velit ex aspernatur ipsam corporis, enim voluptatem repudiandae, totam recusandae debitis minus architecto necessitatibus, sit ratione nulla asperiores.</div>
+    </div>
+
+    <!--
+    CSS Flexible Box Module
+
+    Flex-item: 
+
+    Flex-shrink: 1, por padrão é 1, ou seja, pode encolher, se você colocar 0 significa que não pode encolher (qualquer valor positivo diferente de zero quer dizer que pode encolher)
+
+    Flex-grow: 0, por padrão é 0, ou seja, não pode crescer.
+
+    Então se você quiser que os elementos sejam totalmente elásticos (diminuem e aumentem até o limite da tela) você deve colocar Flex-shrink: 1 e Flex-grow: 1. Essa configuração criam elementos altamente fluídos que crescem e aumentam a vontade.
+
+    Grow é o quanto pode crescer
+    Shrink é o quanto pode encolher
+    Existe a questão da proporcionalidade
+    
+    -->
+</body>
+</html>
