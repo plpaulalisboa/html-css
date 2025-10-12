@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propriedade Flex</title>
+        <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div#cxA {
+            /*flex-shrink: 0;
+            flex-grow: 1;
+            flex-basis: 200px;*/
+
+            flex: 1 0 200px;
+        }
+
+        div#cxB {
+            /*flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px;*/
+
+            flex: 1 1 150px;
+        }
+
+        div#cxC {
+            /*lex-shrink: 8;
+            flex-grow: 1;
+            flex-basis: auto;*/
+
+            flex: 1 8 auto;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>A propriedade Flex</h1>
+    
+
+    <!--
+    Essa propriedade se aplica os Flex-item e não ao flex-container.
+
+    Flex-basis: 150px
+    Flex-grow: 0;
+    Flex-shrink: 1;
+    Ficaria da seguinte forma: Flex: 0 1 150px;
+    Flex = Flex-grow + Flex-shrink + Flex-basis;
+    Isso é mais do que uma simplificação, é uma recomendação da W3C.
+
+    Existem algumas configurações muito utilizadas:
+
+    - Flex: 0 1 auto; (são exatamente os valores padronizados) ou você pode colocar Flex: initial (é a mesma coisa).
+
+    - Flex: 0 0 auto; (é basicamente você não deixar nenhum elemento flexível, ou seja, eles não podem crescer e nem diminuir e o tamanho deles vai depender do tamanho do conteúdo), você também pode usar o Flex: none (que significa nada flexível).
+
+    - Flex: 1 1 auto; (é o contrário do 0 0 auto), ou seja, você pode crescer a vontade um elemento, pode diminuir a vontade o elemento e o limite de aumentar e diminuir vai ser o tamanho natural do conteúdo, então isso é o máximo de flexibilidade que um item, que um filho pode ter, pode ser utilizado também o Flex: auto. Significa o máximo de flexibilidade que ela pode ter.
+
+    - Flex: 3, basicamente se você colocar flex 3 (ou qualquer valor) significa que Flex-grow desse elemento vai ser 3 (apenas o flex-grow). Você pode usar Flex: 3 1 auto, (pois é a mesma coisa).
+
+    -->
+
+
+    <div class="conteiner">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+
+</body>
+</html>
