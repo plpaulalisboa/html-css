@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de container para Grids (parte3)</title>
+    <style>
+        div.container1 {
+            border: 3px solid blue;
+            display: grid; /* Sem o display grid o container */ 
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+        }
+
+        div.item1 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container2 {
+            border: 3px solid blue;
+            display: grid; /* Sem o display grid o container */ 
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            grid-auto-rows: 100px;
+        }
+
+        div.item2 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container3 {
+            border: 3px solid blue;
+            display: grid;
+            grid-template: 100px 100px 100 px / auto auto auto;
+            place-items: stretch  center;
+            place-content: start end;
+
+            /*place-items: vai configurar de forma simplificada o Align-items e o Justify-items.
+            também existe a propriedade place-content: que também simplifica Align-Content e o Justify-Content
+
+            Pode substituir as 2 linhas (grid-template-columns e grid-template-rows), mas na ordem invertida, primeiro rows e depois columns. Vai substituit simplesmente por grid-template
+            */
+
+        }
+
+        div.item3 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="item1">A</div>
+        <div class="item1">B</div>
+        <div class="item1">C</div>
+        <div class="item1">D</div>
+        <div class="item1">E</div>
+        <div class="item1">F</div>
+        <div class="item1">G</div>
+        <div class="item1">H</div>
+        <div class="item1">I</div>
+        <div class="item1">J</div>
+        <!-- Adicionei a letra "J" e note que n
+        não está na mesma proporção que as demais-->
+    </div>
+    <br>
+    <div class="container2">
+        <div class="item2">A</div>
+        <div class="item2">B</div>
+        <div class="item2">C</div>
+        <div class="item2">D</div>
+        <div class="item2">E</div>
+        <div class="item2">F</div>
+        <div class="item2">G</div>
+        <div class="item2">H</div>
+        <div class="item2">I</div>
+        <div class="item2">J</div>
+    </div>
+
+    <!-- 
+    Grid-auto-rows: Sempre que você for acrescentar uma linha nova, esse linha nova vai ter 100px também, como no exemplo deste caso acima.
+    -->
+    <br>
+    <div class="container3">
+        <div class="item3">A</div>
+        <div class="item3">B</div>
+        <div class="item3">C</div>
+        <div class="item3">D</div>
+        <div class="item3">E</div>
+        <div class="item3">F</div>
+        <div class="item3">G</div>
+        <div class="item3">H</div>
+        <div class="item3">I</div>
+        <!-- Adicionei a letra "J" e note que n
+        não está na mesma proporção que as demais-->
+    </div>
+</body>
+</html>
