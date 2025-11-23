@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout na prática (parte3)</title>
+    <style>
+        div.container1 {
+            border: 3px solid blue;
+            height: 250px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+            align-items: start;
+            justify-items: center;
+            align-content: space-between;
+            justify-content: end;
+        }
+
+        div.item1 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container2 {
+            border: 3px solid blue;
+            height: 250px;
+            display: grid;
+            grid-template: repeat(3, auto) / repeat(3, auto);/*simplificando*/
+            gap: 10px;
+            place-items: start center; /*simplificando*/
+            place-content: space-between end; /*simplificando*/
+        }
+
+        div.item2 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container3 {
+            border: 3px solid rgb(14, 136, 20);
+            display: grid;
+            grid-template-rows: 80px 80px 80px;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            place-items: normal normal; 
+            place-content: normal normal; 
+        }
+
+        div.item3 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container4 {
+            border: 3px solid rgb(7, 10, 81);
+            display: grid;
+            grid-template-rows: 80px 80px 80px;
+            grid-template-columns: auto auto auto;
+            grid-auto-rows: 80px; /*se você criar uma linha nova ela terá o tamanho das demais, ou seja, quando for criadas linhas automaticamente elas vão ter o tamanho de 80px*/
+            gap: 10px;
+            place-items: normal normal; 
+            place-content: normal normal; 
+        }
+
+        div.item4 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container5 {
+            border: 3px solid rgb(7, 10, 81);
+            display: grid;
+            grid-template-rows: 80px 80px 80px;
+            grid-template-columns: 120px 120px 120px;
+            grid-auto-flow: row; /*por padrão é Row, ele vai acrescentar o item e quando acrescentar um item novo ele vai acrescentar embaixo, em forma de linha*/
+            grid-auto-rows: 80px;
+            gap: 10px;
+            place-items: normal normal; 
+            place-content: normal normal; 
+        }
+
+        div.item5 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container6 {
+            border: 3px solid rgb(7, 10, 81);
+            display: grid;
+            grid-template-rows: repeat(3, 80px);
+            grid-template-columns: repeat(3, 120px);
+            grid-auto-flow: column;
+            grid-auto-rows: 80px;
+            grid-auto-columns: 120px;
+            gap: 10px;
+            place-items: normal normal; 
+            place-content: normal normal; 
+        }
+
+        div.item6 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container7 {
+            border: 3px solid rgb(7, 10, 81);
+            display: grid;
+            grid-template-rows: repeat(3, 80px);
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-auto-flow: row;
+            grid-auto-rows: 80px;
+            grid-auto-columns: 120px;
+            gap: 10px;
+            place-items: normal normal; 
+            place-content: normal normal; 
+        }
+
+        div.item7 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+
+        div.container8 {
+            border: 3px solid rgb(7, 10, 81);
+            display: grid;
+            grid-template-rows: repeat(3, 80px);
+            grid-template-columns: 100px 40% repeat(2, 1fr);
+            grid-auto-flow: row;
+            grid-auto-rows: 80px;
+            grid-auto-columns: 120px;
+            gap: 10px;
+            place-items: normal normal; 
+            place-content: normal normal; 
+        }
+
+        div.item8 {
+            border: 3px solid red;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="item1">A</div>
+        <div class="item1">B</div>
+        <div class="item1">C</div>
+        <div class="item1">D</div>
+        <div class="item1">E</div>
+        <div class="item1">F</div>
+        <div class="item1">G</div>
+        <div class="item1">H</div>
+    </div>
+    <br>
+    <div class="container2">
+        <div class="item2">A</div>
+        <div class="item2">B</div>
+        <div class="item2">C</div>
+        <div class="item2">D</div>
+        <div class="item2">E</div>
+        <div class="item2">F</div>
+        <div class="item2">G</div>
+        <div class="item2">H</div>
+    </div>
+    <br>
+    <div class="container3">
+        <div class="item3">A</div>
+        <div class="item3">B</div>
+        <div class="item3">C</div>
+        <div class="item3">D</div>
+        <div class="item3">E</div>
+        <div class="item3">F</div>
+        <div class="item3">G</div>
+        <div class="item3">H</div>
+        <div class="item3">I</div>
+        <div class="item3">J</div>
+    </div>
+    <br>
+  
+    <div class="container4">
+        <div class="item4">A</div>
+        <div class="item4">B</div>
+        <div class="item4">C</div>
+        <div class="item4">D</div>
+        <div class="item4">E</div>
+        <div class="item4">F</div>
+        <div class="item4">G</div>
+        <div class="item4">H</div>
+        <div class="item4">I</div>
+        <div class="item4">J</div>
+    </div>
+    <br>
+    <div class="container5">
+        <div class="item5">A</div>
+        <div class="item5">B</div>
+        <div class="item5">C</div>
+        <div class="item5">D</div>
+        <div class="item5">E</div>
+        <div class="item5">F</div>
+        <div class="item5">G</div>
+        <div class="item5">H</div>
+        <div class="item5">I</div>
+        <div class="item5">J</div>
+    </div>
+    <br>
+    <div class="container6">
+        <div class="item6">A</div>
+        <div class="item6">B</div>
+        <div class="item6">C</div>
+        <div class="item6">D</div>
+        <div class="item6">E</div>
+        <div class="item6">F</div>
+        <div class="item6">G</div>
+        <div class="item6">H</div>
+        <div class="item6">I</div>
+        <div class="item6">J</div>
+    </div>
+    <br>
+    <div class="container7">
+        <div class="item7">A</div>
+        <div class="item7">B</div>
+        <div class="item7">C</div>
+        <div class="item7">D</div>
+        <div class="item7">E</div>
+        <div class="item7">F</div>
+        <div class="item7">G</div>
+        <div class="item7">H</div>
+        <div class="item7">I</div>
+        <div class="item7">J</div>
+    </div>
+    <br>
+    <div class="container8">
+        <div class="item8">A</div>
+        <div class="item8">B</div>
+        <div class="item8">C</div>
+        <div class="item8">D</div>
+        <div class="item8">E</div>
+        <div class="item8">F</div>
+        <div class="item8">G</div>
+        <div class="item8">H</div>
+        <div class="item8">I</div>
+        <div class="item8">J</div>
+    </div>
+</body>
+</html>
